@@ -18,8 +18,7 @@ I connected using:
 
 ssh root@<DROPLET_PUBLIC_IP>
 
-yaml
-Copy code
+ 
 
 ---
 
@@ -29,8 +28,7 @@ apt update
 apt install -y docker.io docker-compose
 systemctl enable --now docker
 
-yaml
-Copy code
+ 
 
 ---
 
@@ -40,10 +38,7 @@ I created my directory:
 
 mkdir -p ~/wireguard
 cd ~/wireguard
-
-yaml
-Copy code
-
+ 
 Then created `docker-compose.yml`:
 
 YAML
@@ -75,7 +70,7 @@ services:
     restart: unless-stopped
 Then started it:
 
-Copy code
+ 
 docker-compose up -d
 This auto-generated peers for phone (peer1) and PC (peer2).
 
@@ -83,7 +78,7 @@ This auto-generated peers for phone (peer1) and PC (peer2).
 DigitalOcean droplets must NAT VPN traffic:
 
 bash
-Copy code
+ 
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 echo "net.ipv4.ip_forward=1" | tee /etc/sysctl.d/99-wireguard.conf
 sysctl --system
@@ -92,7 +87,7 @@ docker restart wireguard
 I exported the QR code:
 
 bash
-Copy code
+ 
 docker cp wireguard:/config/peer1/peer1.png ./peer1.png
 Then scanned it using the WireGuard iOS app.
 
@@ -103,7 +98,7 @@ Phone WireGuard UI
 I exported my PC config:
 
 bash
-Copy code
+ 
 docker cp wireguard:/config/peer2/peer2.conf ./peer2.conf
 Then imported it into the WireGuard Windows desktop app.
 
@@ -130,4 +125,4 @@ All screenshots inside images/ folder
 
 This index.md (GitHub Pages)
 
-No private keys or sensitive config fields are included.<img width="725" height="631" alt="Screenshot 2025-11-23 134143" src="https://github.com/user-attachments/assets/cc398b24-6d86-4dbb-b42d-80fac15237aa" />
+<img width="725" height="631" alt="Screenshot 2025-11-23 134143" src="https://github.com/user-attachments/assets/cc398b24-6d86-4dbb-b42d-80fac15237aa" />
