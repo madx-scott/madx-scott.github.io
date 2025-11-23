@@ -1,4 +1,3 @@
-<img width="309" height="654" alt="Screenshot 2025-11-23 135336" src="https://github.com/user-attachments/assets/18d571b8-61b8-46a1-8959-f7f9f473d461" />
 # WireGuard VPN Lab — DigitalOcean + Docker
 
 This GitHub Pages document covers my full WireGuard VPN deployment using Docker on a DigitalOcean droplet, including all required screenshots, configs, and verification steps.
@@ -98,7 +97,7 @@ docker cp wireguard:/config/peer1/peer1.png ./peer1.png
 Then scanned it using the WireGuard iOS app.
 
 Phone WireGuard UI
-![Phone WireGuard UI](images/Image (3).png
+![Phone WireGuard UI]<img width="309" height="654" alt="Screenshot 2025-11-23 135336" src="https://github.com/user-attachments/assets/18d571b8-61b8-46a1-8959-f7f9f473d461" />
 
 6. PC Setup (Peer 2)
 I exported my PC config:
